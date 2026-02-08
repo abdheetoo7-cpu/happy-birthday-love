@@ -2,6 +2,27 @@
 const ageEl = document.getElementById("ageNumber");
 let age = 20;
 
+
+const bgMusic = document.getElementById("bgMusic");
+let musicStarted = false;
+
+function playMusicOnScroll() {
+  if (musicStarted) return;
+
+  bgMusic.volume = 0.3;
+  bgMusic.play()
+    .then(() => {
+      musicStarted = true;
+      window.removeEventListener("scroll", playMusicOnScroll);
+    })
+    .catch(err => {
+      console.log("Scroll audio blocked:", err);
+    });
+}
+
+// start music on FIRST scroll
+window.addEventListener("scroll", playMusicOnScroll, { passive: true });
+
 const questions = [
   "Will you go on a date with me?",
   "Do you promise to laugh at my bad jokes?",
@@ -92,8 +113,11 @@ const effects = document.getElementById("effects");
 const finalText = document.getElementById("finalText");
 
 function pressureYes() {
+startMusic(); // 👈 THIS is what unlocks audio
+
   boop.currentTime = 0;
   boop.play();
+
 
   noScale = Math.max(noScale - 0.15, 0.15);
   yesScale = Math.min(yesScale + 0.2, 2.6);
@@ -128,6 +152,7 @@ function handleYes() {
     return;
   }
 
+raiseMusicVolume(0.9, 0.02, 120);
   // FINAL YES ❤️
  finalText.innerText =
   "Happy birthday once again baby ❤️ \n" +
@@ -153,6 +178,16 @@ function handleYes() {
 
  
 }
+function raiseMusicVolume(target = 0.85, step = 0.03, interval = 100) {
+  const fade = setInterval(() => {
+    if (bgMusic.volume >= target) {
+      bgMusic.volume = target;
+      clearInterval(fade);
+    } else {
+      bgMusic.volume = Math.min(bgMusic.volume + step, target);
+    }
+  }, interval);
+}
 // EYES FOLLOW CURSOR
 document.addEventListener("mousemove", e => {
   document.querySelectorAll(".pupil").forEach(pupil => {
@@ -167,4 +202,5 @@ document.addEventListener("mousemove", e => {
   });
 });
 
-console.log("built late at night, with coffee and feelings");
+
+console.log("built late at night, with love and feelings");
