@@ -166,6 +166,11 @@ button {
   font-size: 60px;
   animation: pop 1.2s ease forwards;
 }
+.final h2 {
+  white-space: pre-line;
+  line-height: 1.6;
+  font-weight: 500;
+}
 
 .heart {
   position: fixed;
