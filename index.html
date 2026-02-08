@@ -2,65 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy 27th Birthday Richa ❤️</title>
+  <title>Happy Birthday Richa ❤️</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="hearts"></div>
-
+<!-- HERO -->
 <section class="hero">
-  <h1>Happy 27th Birthday, Richa 🎂</h1>
-  <p>You’re not growing older… you’re growing more amazing ✨</p>
-  <div class="age">
-    <span id="age">26</span>
+  <!-- floating photo stream -->
+  <div class="balloons" id="balloons"></div>
+
+  <h1>Happy Birthday, Richa 🎂</h1>
+
+  <div class="age-counter">
+    <span id="ageNumber">20</span>
   </div>
-</section>
 
-<section data-aos="fade-up">
-  <h2>Dear Love 💌</h2>
-  <p class="letter">
-    I know turning 27 feels heavy sometimes.  
-    But to me, every year just adds another layer to the woman I admire.  
-    You’re tall, beautiful, intelligent, kind, and effortlessly brilliant.  
-    And I fall for you a little more every single day ❤️
-  </p>
-</section>
-
-<section class="cards" data-aos="fade-up">
-  <h2>Tap These 💖</h2>
-  <div class="card" onclick="reveal(this)">Your Smile 😊</div>
-  <div class="card" onclick="reveal(this)">Your Mind 🧠</div>
-  <div class="card" onclick="reveal(this)">Your Heart 💗</div>
-</section>
-
-<section data-aos="fade-up">
-  <h2>Us 📸</h2>
-  <div class="photos">
-    <img src="images/us.jpg">
-    <img src="images/richa1.jpg">
-    <img src="images/richa2.jpg">
-  </div>
-</section>
-
-<section class="promise" data-aos="zoom-in">
-  <h2>A Promise 💍</h2>
   <p>
-    In a few months, we’ll be engaged.  
-    Later this year, we’ll be married.  
-    And every birthday after this…  
-    you’ll never face alone. Ever.
+     Still young. Still powerful.  
+    Still the most beautiful soul I know ❤️
+<br>
+<span style="margin-left:315px">
+*also a great cook 👩‍🍳</span>
   </p>
-  <button onclick="finalSurprise()">One Last Click ✨</button>
-  <h3 id="finalText"></h3>
 </section>
+
+<!-- HER -->
+<section class="her">
+  <h2>This page is mostly about you</h2>
+
+  <p>
+    You overthink small things.  
+    You care more than you admit.  
+    You pretend you’re fine even when you’re tired.
+    <br><br>
+    And somehow you still show up as yourself.
+  </p>
+
+  <div class="photos">
+    <img src="images/her1.jpg">
+    <img src="images/her2.jpg">
+    <img src="images/her3.jpg">
+    <img src="images/her4.jpg">
+    <img src="images/her5.jpg">
+    <img src="images/her6.jpg">
+<img src="images/her7.jpg">
+  </div>
+
+  <p class="soft-text">
+    I hope you’re always gentle with yourself.
+  </p>
+</section>
+
+<!-- US -->
+<section class="timeline">
+  <h2>Us</h2>
+
+  <p>
+   Just us, over time.
+  </p>
+
+  <div class="photos">
+    <img src="images/us1.jpg">
+    <img src="images/us2.jpg">
+    <img src="images/us3.jpg">
+    <img src="images/us4.jpg">
+    <img src="images/us5.jpg">
+        <img src="images/us7.jpg">
+    <img src="images/us8.jpg">
+    <img src="images/us9.jpg">
+    <img src="images/us10.jpg">
+<img src="images/us11.jpg">
+<img src="images/us12.jpg">
+<img src="images/us13.jpg">
+  </div>
+
+  <p class="soft-text">
+    Somewhere between these photos, we became home.
+  </p>
+</section>
+
+<!-- QUESTION -->
+<section class="questions">
+  
+  <h3 id="questionText"></h3>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="handleYes()">Yes</button>
+    <button id="noBtn"
+            onmouseover="pressureYes()"
+            onclick="pressureYes()">No</button>
+  </div>
+
+  <p id="hint"></p>
+
+  <audio id="boopSound"
+    src="https://assets.mixkit.co/sfx/preview/mixkit-interface-click-1126.mp3">
+  </audio>
+
+
+<!-- WATCHERS -->
+
+  <div class="eyes">
+    <div class="eye"><div class="pupil"></div></div>
+    <div class="eye"><div class="pupil"></div></div>
+    <div class="eye"><div class="pupil"></div></div>
+  </div>
+</section>
+
+
+<!-- FINAL -->
+<section class="final">
+  <h2 id="finalText"></h2>
+</section>
+
+<div id="effects"></div>
 
 <script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
 </body>
 </html>
