@@ -129,7 +129,12 @@ function handleYes() {
   }
 
   // FINAL YES ❤️
-  finalText.innerText = "Happy birthday once again baby ❤️";
+ finalText.innerText =
+  "Happy birthday once again baby ❤️ \n" +
+  "Every year adds to you,\n" +
+  "but never takes anything away.\n" +
+  "If growing older means growing with you,\n" +
+  "then I’m ready for all of it.";
 
   
 
