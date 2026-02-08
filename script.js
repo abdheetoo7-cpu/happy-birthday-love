@@ -113,7 +113,7 @@ const effects = document.getElementById("effects");
 const finalText = document.getElementById("finalText");
 
 function pressureYes() {
-startMusic(); // 👈 THIS is what unlocks audio
+//startMusic(); // 👈 THIS is what unlocks audio
 
   boop.currentTime = 0;
   boop.play();
@@ -204,3 +204,4 @@ document.addEventListener("mousemove", e => {
 
 
 console.log("built late at night, with love and feelings");
+
